@@ -39,6 +39,11 @@
    ```bash
    flutter run
    ```
+# Important info : 
+- Consider generating your own apk using command : 
+   ```bash
+   flutter build apk --release
+   ```
 
 # P.S :
 
