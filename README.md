@@ -1,7 +1,7 @@
 # anime_manga_project
 
 ## Anime Manga Project:
-
+- I wasn't able to find an api for webtoon, hence I did the assignment using manga.
 - A Flutter application to explore popular manga, featuring a modern UI, detailed views, and sharing functionality. Feel free to modify any parts to better fit your project’s goals and your style!
 
 ## Features
