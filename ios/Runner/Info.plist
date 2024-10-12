@@ -45,5 +45,10 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<!-- Add the following permissions -->
+    <key>NSUserTrackingUsageDescription</key>
+    <string>This app uses tracking to provide personalized ads and improve user experience.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app needs access to your photo library to share images.</string>
 </dict>
 </plist>

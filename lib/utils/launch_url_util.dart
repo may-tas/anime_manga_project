@@ -5,6 +5,7 @@ void launchURL(String url) async {
   if (await canLaunchUrl(uri)) {
     await launchUrl(uri);
   } else {
+    print('Could not launch $url');
     throw 'Could not launch $uri';
   }
 }

@@ -1,5 +1,6 @@
 import 'package:anime_manga_project/models/manga_model.dart';
 import 'package:flutter/material.dart';
+import 'package:share_plus/share_plus.dart';
 
 class MangaCard extends StatelessWidget {
   const MangaCard({
@@ -8,6 +9,10 @@ class MangaCard extends StatelessWidget {
   });
 
   final Manga manga;
+
+  void _shareManga(String url) {
+    Share.share(url, subject: 'Check out this manga!');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +40,32 @@ class MangaCard extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(
-              manga.title,
-              style: const TextStyle(fontWeight: FontWeight.bold),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+            child: Column(
+              children: [
+                Text(
+                  manga.title,
+                  style: const TextStyle(fontWeight: FontWeight.bold),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      'Check this out! ',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.share),
+                      onPressed: () {
+                        _shareManga(manga.url);
+                      },
+                    ),
+                  ],
+                )
+              ],
             ),
           ),
         ],

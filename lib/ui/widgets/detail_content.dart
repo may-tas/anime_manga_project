@@ -31,7 +31,7 @@ class DetailContent extends StatelessWidget {
             child: Image.network(
               manga.largeImageUrl,
               fit: BoxFit.cover,
-              height: 300, // Set a fixed height for better layout
+              height: 300,
               width: double.infinity,
             ),
           ),
@@ -79,13 +79,13 @@ class DetailContent extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () => launchURL(manga.url),
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.purpleAccent, // Button color
+                backgroundColor: Colors.purpleAccent,
                 padding: const EdgeInsets.symmetric(
                   vertical: 12,
                   horizontal: 24,
                 ),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30), // Rounded button
+                  borderRadius: BorderRadius.circular(30),
                 ),
               ),
               child: const Text(
@@ -105,7 +105,7 @@ class DetailContent extends StatelessWidget {
       child: Text(
         text,
         style: const TextStyle(
-          fontSize: 16,
+          fontSize: 17,
           color: Colors.blueGrey,
         ),
       ),

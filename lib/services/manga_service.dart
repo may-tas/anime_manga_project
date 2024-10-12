@@ -10,8 +10,7 @@ class MangaService {
         queryParameters: {
           'type': 'manga',
           'filter': 'bypopularity',
-          'limit': 12,
-          'page': 1,
+          'limit': 10,
         },
         options: Options(headers: {
           'Content-Type': 'application/json',
@@ -23,6 +22,7 @@ class MangaService {
 
         // Parsing JSON into List<Manga>
         final dataResponse = data.map((item) => Manga.fromJson(item)).toList();
+
         return dataResponse;
       } else {
         throw Exception('Failed to load mangas');

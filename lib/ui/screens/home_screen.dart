@@ -24,17 +24,6 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        actions: [
-          IconButton(
-            icon: const Icon(
-              Icons.share,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              // Implement share functionality here
-            },
-          ),
-        ],
       ),
       body: BlocBuilder<MangaCubit, MangaState>(
         builder: (context, state) {
@@ -44,7 +33,7 @@ class HomeScreen extends StatelessWidget {
             return Center(child: Text('Error: ${state.message}'));
           } else if (state is MangaLoaded) {
             final List<Manga> mangas =
-                state.mangas.take(10).toList(); // Limit to 10 mangas
+                state.mangas.take(10).toList(); // Limit 10 mangas
 
             return GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

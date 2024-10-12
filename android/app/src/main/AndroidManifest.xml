@@ -1,4 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+     <!-- Add permissions here -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> <!-- If using location services -->
+    <uses-permission android:name="android.permission.CAMERA"/> <!-- If using camera -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/> <!-- If accessing contacts -->
+
     <application
         android:label="anime_manga_project"
         android:name="${applicationName}"
